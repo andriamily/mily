@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MILY"</title>
+    <link rel="stylesheet" href="styles.css">
+	<script src="scripts.js" defer></script>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+</head>
+<body>
+
+    <!-- Loader -->
+    <div id="page-loader">
+        <div class="spinner"></div>
+        <div class="loader-content">
+            <img src="images/logo.png" alt="Logo MILY" class="loader-logo">
+            <p class="loader-text">MILY"</p>
+        </div>
+    </div>
+
+    <!-- Barre de navigation -->
+    <nav id="sidebar">
+        <ul>
+            <li><a href="#homepage"><img src="images/icone-home.png" alt="Home Icon"><span class="menu-text"> Accueil</span></a></li>
+            <li><a href="#about"><img src="images/icone-about.png" alt="About Icon"><span class="menu-text"> À propos</span></a></li>
+            <li><a href="#services"><img src="images/icone-services.png" alt="Services Icon"><span class="menu-text"> Nos services</span></a></li>
+            <li><a href="#portfolio"><img src="images/icone-portfolio.png" alt="Portfolio Icon"><span class="menu-text"> Portfolio</span></a></li>
+            <li><a href="#contacts"><img src="images/icone-contact.png" alt="Contact Icon"><span class="menu-text"> Contacts</span></a></li>
+        </ul>
+        <div class="menu-close hidden" id="menu-close">&times;</div>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="menu-toggle" id="menu-toggle">
+            <img src="images/icone-menu.png" alt="Menu Icon" class="menu-icon">
+        </div>
+        <div id="txth1" class="txth1">
+			<a href="#homepage" class="hom">Accueil</a>
+            <a href="#about" class="abo">À propos</a>
+            <a href="#services" class="ser">Services</a>
+            <a href="#portfolio" class="por">Portfolio</a>
+            <a href="#contacts" class="con">Contacts</a>
+        </div>
+        <div id="logo"><img src="images/logo.png"></div>
+    </header>
+
+    <!-- Contenu -->
+    <div class="content">
+        <div id="lightbox" style="display: none;">
+					<img id="lightbox-img" src="" alt="Image Lightbox">
+					<span class="lightbox-close">&times;</span>
+					<p id="lightbox-description"></p>
+				</div>
+		<!-- homepage -->
+		<section id="homepage">
+            <div class="firstcontent">
+            <div class="image-cover">
+				<div id="particle-container"></div>
+                <div class="slides">
+                    <div class="slide slide1">
+                        <img src="images\photo1.jpg" alt="Slide 1">
+                            <div class="slideLOGO">
+                                <img src="images/logo.png" id="slideLOGO">
+                                    </div>
+	                            <div class="containerSLIDE">
+                            <div id="monTexte" class="texteSLIDE"></div>
+                        </div>
+                    </div>
+                    <div class="slide slide2">
+                        <img src="images\photo2.jpg" alt="Slide 2">
+                            <div class="text" id="text-slide2">Compétences clés :</div>
+                                <div id="text1-slide2">Cartographie statique et interactive</div>
+                            <div id="text2-slide2">Environnement et hydrogéologie / SIG</div>
+                        <div id="text3-slide2">Infographie et numérisation</div>
+                    </div>
+                    <div class="slide slide3">
+                        <img src="images\photo3.jpg" alt="Slide 3">
+                            <div class="text" id="text-slide3">Visions</div>
+                                <div id="text1-slide3">Transformer les idées en actions</div>
+                            <div id="text2-slide3">Innover avec éthique et impact</div>
+                        <div id="text3-slide3">Créer avec responsabilité et positivité ...</div>
+                    </div>
+                    <div class="slide slide4">
+                        <img src="images\photo4.jpg" alt="Slide 4">
+                            <div class="text" id="text-slide4">Ensemble, créons quelque chose d'unique</div>
+                                <div id="text1-slide4">Chaque projet est une priorité</div>
+                            <div id="text2-slide4">Le moindre détail fait la différence</div>
+                        <div id="text3-slide4">Pour un impact durable</div>
+                    </div>
+                </div>
+            </div>
+                <div class="dots">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                </div>
+            </div>
+            
+        <div class="resume">
+				<div class="resumePortfolio">
+	                <div class="resume2">
+						<div class="resume2a"><img src="images/p1.png"></div>
+							<div class="resume2b">
+							<p class="resume2b1a">CARTOGRAPHIE STATIQUE : </p>
+							<p class="resume2b3">cartes de visionnage et d'orientation,</p>
+							<p class="resume2b3">cartes thématiques,</p>
+							<p class="resume2b4">cartes géologiques, hydrogéologiques, ...</p>
+						</div>
+					</div>
+					
+                    <div class="resume3">
+						<div class="resume3a"><img src="images/p2.png"></div>
+						<div class="resume3b">
+							<p class="resume3b1a">CARTOGRAPHIE INTERACTIVE :</p>
+							<p class="resume3b2">cartes interactive de navigation,</p>
+							<p class="resume2b3">cartes personnalisables,</p>
+							<p class="resume2b4">application cartographiques, webmapping ...</p>
+						</div>
+					</div>
+					
+                    <div class="resume4">
+						<div class="resume4a"><img src="images/p3.png"></div>
+						<div class="resume4b">
+							<p class="resume4b1a">ENVIRONNEMENT ET HYGROGEOLOGIE APPLIQUEE AU SIG :</p>
+							<p class="resume4b2">Calcule des indices environnementaux : ndvi, ndwi,</p>
+							<p class="resume4b3">Analyses climatique</p>
+							<p class="resume4b4">Analyses spatiale,</p>
+						</div>
+					</div>
+					
+                    <div class="resume5">
+						<div class="resume5a"><img src="images/p4.png"></div>
+						<div class="resume5b">
+							<p class="resume5b1a">INFOGRAPHIE :</p>
+							<p class="resume5b3">digitalisation, </p>
+							<p class="resume5b3">numérisation,</p>
+							<p class="resume5b4">création de base de données, ... </p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		<div id="imageETservAreaA" class="imageETservAreaA">
+			<div id="apropos" class="apropos">
+			<div class="servAreaparagrapheA" id="servAreaparagrapheA">
+				<div class="servAreaparagrapheaA" id="servAreaparagrapheaA">À propos ... </div>
+                <a href="#about" class="servAreaparagraphebA" id="servAreaparagraphebA">voir plus ...</a>
+                </div>
+            <div id="servAreaA" class="servAreaA">
+                <p class="servAreaparagraphe1A">Bienvenue sur MILY", un espace dédié à des solutions numériques innovantes, pour accompagner les transformations digitales et convertir vos données en outils visuels impactants. Cet espace a été conçu avec passion par <span style="font-weight: bold; text-decoration:underline;"><a href="#about" class="mily" id="mily">Andriamily Z.</a></span>, Hydrogéologue/Analyste SIG indépendant.</p>
+                <p class="servAreaparagraphe1A">Dans une démarche constante d'innovation, l'accent est mis sur l'exploration des potentialités des technologies SIG, avec pour objectif de repousser leurs limites tout en les rendant accessibles à un large public. Ces solutions numériques offrent des approches pratiques et modernes pour répondre aux problématiques diverses.</p>
+                <p class="servAreaparagraphe1A">La cartographie, bien plus qu'un simple outil graphique, se révèle être un moyen puissant d'analyser, de visualiser et de raconter des histoires captivantes. Elle permet de traduire des données complexes en représentations compréhensibles et engageantes, adaptées à un large éventail de besoins.</p>
+                <p class="servAreaparagraphe1A">Les cartes ouvrent de nouvelles perspectives en offrant une clé unique pour comprendre le monde, naviguer à travers des problématiques complexes et transformer des données en solutions visuelles impactantes. Elles allient rigueur technique et créativité pour apporter des réponses inspirantes aux défis modernes.</p>
+            </div>
+			</div>
+			<div class="gridimageservAreaA" id="gridimageservAreaA">
+                    <div class="gridimageservArea1A" id="gridimageservArea1A"><a href="images/abt1.png" class="lightbox-link" data-description='Logo de MILY"'><img src="images/abt1.png" alt="Image a1"></a></div>
+                    <div class="gridimageservArea2A" id="gridimageservArea2A"><a href="images/abt2.jpg" class="lightbox-link" data-description="Une globe terrestre pour dire que nous pouvons collaborer sans aucune contrainte géographique."><img src="images/abt2.jpg" alt="Image a2"></a></div>
+					<div class="gridimageservArea3A" id="gridimageservArea3A"><a href="images/abt3.jpg" class="lightbox-link" data-description="Des solutions numériques innovantes, pour accompagner les transformations digitales"><img src="images/abt3.jpg" alt="Image a3"></a></div>
+                    <div class="gridimageservArea4A" id="gridimageservArea4A"><a href="images/abt4.jpg" class="lightbox-link" data-description="Carte interactive"><img src="images/abt4.jpg" alt="Image a3"></a></div>
+	            </div>
+			
+        </div>
+		
+		<div id="imageETservArea" class="imageETservArea">
+				<div id="apropos1" class="apropos1">
+			    <div class="servAreaparagraphe" id="servAreaparagraphe">
+                    <div class="servAreaparagraphea" id="servAreaparagraphea">Services ...</div>
+                    <a href="#services" class="servAreaparagrapheb" id="servAreaparagrapheb">voir plus ...</a>
+	            </div>
+			<div id="servArea" class="servArea">
+                <p class="servAreaparagraphe1AA">Une gamme complète de services spécialisés est proposée, alliant innovation et expertise, afin d'offrir des solutions de pointe dans les domaines suivants :</p>
+                <p class="servAreaparagraphe2">CARTOGRAPHIE STATIQUE,</p>
+                <p class="servAreaparagraphe3">CARTOGRAPHIE INTERACTIVE</p>
+                <p class="servAreaparagraphe4">ENVIRONNEMENT ET HYGROGEOLOGIE APPLIQUEE AU SIG</p>
+                <p class="servAreaparagraphe5">INFOGRAPHIE ET NUMERISATION</p>
+        </div>
+		</div>
+               <div class="gridimageservArea" id="gridimageservArea">
+                    <div class="gridimageservArea1" id="gridimageservArea1"><a href="images/srv1.jpg" class="lightbox-link" data-description="Cartes de visionnage et d'orientation"><img src="images/srv1.jpg" alt="Image s1"></a></div>
+                    <div class="gridimageservArea2" id="gridimageservArea2"><a href="images/srv2.jpg" class="lightbox-link" data-description="Carte interactive de navigation, cartes personnélisable"><img src="images/srv2.jpg" alt="Image s2"></a></div>
+                    <div class="gridimageservArea3" id="gridimageservArea3"><a href="images/srv3.jpg" class="lightbox-link" data-description="De la carte géologique sur papier à sa version numérique, pour vous offrir une vision complète"><img src="images/srv3.jpg" alt="Image s3"></a></div>
+                    <div class="gridimageservArea4" id="gridimageservArea4"><a href="images/srv4.jpg" class="lightbox-link" data-description="Changement de vos documents physiques en documents numériques"><img src="images/srv4.jpg" alt="Image s4"></a></div>
+                </div>
+     </div>
+
+
+<div class="secondcontent">
+  <div id="collabArea" class="collabArea">
+        <p class="collabAreaparagraphe1">Si Vous etes :</p>
+        <div class="collabAreaparagraphe2">
+            <p class="collabAreaparagraphe2a">Chercheurs et/ou étudiants;</p>
+            <p class="collabAreaparagraphe2b">Une collectivité; Maison d'édition;</p>
+            <p class="collabAreaparagraphe2c">Une entreprise et/ou un bureau d'études,</p>
+            <p class="collabAreaparagraphe2d">Un particulier ou autres...</p>
+        </div>
+      
+        <p class="collabAreaparagraphe3">Et que vous souhaitez :</p>
+        <div class="collabAreaparagraphe4">
+            <p class="collabAreaparagraphe4a">Communiquer efficacement vos données;</p>
+            <p class="collabAreaparagraphe4b">Illustrer vos publications,ou vos ouvrages;</p>
+            <p class="collabAreaparagraphe4c">Numeriser ou digitaliser vos données;</p>
+            <div class="collabAreaparagraphe4d">
+                <p class="collabAreaparagraphe4da">Faire parler vos données ou autres...</p>
+                <div class="collabAreaa" id="collabAreaa">
+                    <a href="#contacts" class="collabAreab" id="collabAreab">Echangeons sur vos projets</a>
+                </div>
+            </div>
+        </div>   
+  </div>
+	
+  <div id="portfoli" class="portfoli">
+    <div id="prtflinitial">
+        <div id="prtflinitiala">Dernières réalisations ...</div> 
+        <a href="#portfolio" class="prtflinitialb" id="prtflinitialb">voir plus ...</a>
+        </div> 
+      <div id="prtflitem" class="prtflitem">
+        <div id="prtfl1" class="prtfl1">
+          <div id="prtfl1img" class="prtfl1img">
+            <div id="prtfl1img1" class="prtfl1img1"><a href="images/rea1.jpg" class="lightbox-link" data-description="Carte de localisation du bassin versant Manakaravavy"><img src="images/rea1.jpg" alt="Image rea1"></a></div>
+            <div id="prtfl1img2" class="prtfl1img2"><a href="images/rea2.jpg" class="lightbox-link" data-description="Carte de localisation du CR Befotaka"><img src="images/rea2.jpg" alt="Image rea2"></a></div>
+          </div> 
+        <div id="conteneur1">
+        <div id="txtc1" class="txtc1">Cartes de visionnage et d'orientation</div>
+      </div>  
+    </div>
+        <div id="prtfl2" class="prtfl2">
+          <div id="prtfl2img" class="prtfl2img">
+            <div id="prtfl2img1" class="prtfl2img1"><a href="images/rea3.jpg" class="lightbox-link" data-description="Carte interactive personnalisable selon vos besoin"><img src="images/rea3.jpg" alt="Image rea3"></a></div>
+            <div id="prtfl2img2" class="prtfl2img2"><a href="images/rea4.jpg" class="lightbox-link" data-description="Carte interactive personnalisable selon vos besoin"><img src="images/rea4.jpg" alt="Image rea4"></a></div>
+          </div>
+        <div id="conteneur2">
+        <div id="txtc2" class="txtc2">Cartes interactives personnalisable selon vos besoinsn</div>
+      </div> 
+    </div>
+        <div id="prtfl3" class="prtfl3">
+          <div id="prtfl3img" class="prtfl3img">
+            <div id="prtfl3img1" class="prtfl1img1"><a href="images/rea5.jpg" class="lightbox-link" data-description="Carte des cours d'eau du bassin versant Linta"><img src="images/rea5.jpg" alt="Image rea5"></a></div>
+            <div id="prtfl3img2" class="prtfl3img2"><a href="images/rea6.jpg" class="lightbox-link" data-description="Carte géologique du bassin versant Linta"><img src="images/rea6.jpg" alt="Image rea6"></a></div>
+          </div> 
+        <div id="conteneur3">
+        <div id="txtc3" class="txtc3">Carte géologique et des cours d'eau d'un bassin versant</div>
+      </div>
+    </div>
+        <div id="prtfl4" class="prtfl4">
+          <div id="prtfl4img" class="prtfl4img">
+            <div id="prtfl4img1" class="prtfl4img1"><a href="images/rea21.jpg" class="lightbox-link" data-description="Numérisation de document administratif et transformation en bases de données exploitables pour une gestion plus fluide et sécurisée."><img src="images/rea21.jpg" alt="Image rea7"></a></div>
+            <div id="prtfl4img2" class="prtfl4img2"><a href="images/rea22.jpg" class="lightbox-link" data-description="Conversion de documents papier en format numérique structuré, facilitant l’archivage et l’accès aux informations essentielles."><img src="images/rea22.jpg" alt="Image rea8"></a></div>
+          </div>
+        <div id="conteneur4">
+        <div id="txtc4" class="txtc4">Numérisation de documents administratifs pour les convertir en base de données numérique, optimisant l’archivage, la gestion et l’accès aux informations.</div>
+      </div>
+    </div>
+    </div>
+  <!-- Contrôles du carrousel -->
+      <div class="carousel-controls">
+        <button class="prev"><</button>
+        <button class="next">></button>
+      </div>
+      <div class="carousel-indicators">
+        <span class="carousel-indicator active"></span>
+        <span class="carousel-indicator"></span>
+        <span class="carousel-indicator"></span>
+        <span class="carousel-indicator"></span>
+      </div>
+</div>
+</div>
+
+<div id="comm">
+    <!-- Section Contact -->
+    <div id="contact">
+        <p id="contactme">Contactez-moi</p>
+        <div class="social-contact">
+            <a href="mailto:radoandriamily@gmail.com"><img src="images/ic1.png" alt="Email" class="icones"> Email</a>
+            <a href="https://wa.me/261345612397" target="_blank"><img src="images/ic5.png" alt="WhatsApp" class="icones"> WhatsApp</a>
+            <a href="https://www.linkedin.com/in/andriamily" target="_blank"><img src="images/ic4.png" alt="LinkedIn" class="icones"> LinkedIn</a>
+            <a href="https://www.facebook.com/andriamily" target="_blank"><img src="images/ic2.png" alt="Facebook" class="icones">Facebook</a>
+        </div>
+    </div>
+    
+    <!-- Section Partage -->
+    <div id="partage">
+        <p id="sharethispage">Partagez cette page</p>
+        <div class="social-share">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://andriamily.github.io/mily/#homepage" target="_blank"><img src="images/ic2.png" alt="Facebook" class="icones"> Facebook</a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://andriamily.github.io/mily/#homepage" target="_blank"><img src="images/ic4.png" alt="LinkedIn" class="icones"> LinkedIn</a>
+            <a href="https://api.whatsapp.com/send?text=https://andriamily.github.io/mily/#homepage" target="_blank"><img src="images/ic5.png" alt="WhatsApp" class="icones"> WhatsApp</a>
+        </div>
+    </div>
+</div>
+</section>
+		<!-- aboutpage -->
+        <section id="about" style="display: none;">
+				 <div id="nom">
+                <div id="logo1">
+                    <img src="images/logo.png" alt="logo" class="logo1">
+                </div>
+                <div id="texte" class="texte-style">MILY"</div>
+	        </div>
+			 
+            <div id="servAreaAb" class="servAreaAb">
+                <p class="servAreaparagraphe1A">Je suis Andriamily Z., j’ai créé MILY", avec pour objectif de repousser les limites de la cartographie et des SIG tout en les rendant accessibles à un large public. Cet espace est pensé comme une passerelle entre technicité et accessibilité, permettant à chacun de mieux exploiter le potentiel des données géospatiales à travers des solutions adaptées et innovantes. Mon parcours universitaire m’a permis de développer des connaissances et des compétences solides en cartographie et SIG, analyse de données, et gestion de bases de données géographiques. Ces acquis ont été enrichis par plusieurs expériences professionnelles au sein de diverses structures.</p>
+                <p class="servAreaparagraphe1A">Hydrogéologue et Analyste en SIG depuis 2021, j’ai occupé des postes variés tels que, responsable de bases de données, hydrogéologue, contrôleur qualité et assistant SIG dans des bureaux d’études, ONG, des entreprises et des sociétés, également cartographe pour des publics diversifiés.</p>
+            </div>		
+		<div id="imageETservArea1" class="imageETservArea1">
+			<div class="gridimageservArea" id="gridimageservArea">
+                    <div class="gridimageservArea1" id="gridimageservArea1"><a href="images/srv1.jpg" class="lightbox-link" data-description="Cartes de visionnage et d'orientation"><img src="images/srv1.jpg" alt="Image s1"></a></div>
+                    <div class="gridimageservArea2" id="gridimageservArea2"><a href="images/srv2.jpg" class="lightbox-link" data-description="Carte interactive de navigation, cartes personnélisable"><img src="images/srv2.jpg" alt="Image s2"></a></div>
+                    <div class="gridimageservArea3" id="gridimageservArea3"><a href="images/srv3.jpg" class="lightbox-link" data-description="Carte géologique du Sud de Madagascar"><img src="images/srv3.jpg" alt="Image s3"></a></div>
+                    <div class="gridimageservArea4" id="gridimageservArea4"><a href="images/srv4.jpg" class="lightbox-link" data-description="Changement de vos documents physiques en documents numériques"><img src="images/srv4.jpg" alt="Image s4"></a></div>
+                </div>
+				<div id="aprop" class="aprop">
+                <p class="servAreaparagraphe1aai">Aujourd’hui, je me positionne en tant qu’analyste SIG indépendant. Ma passion pour la cartographie et les systèmes d’information géographique (SIG) a débuté en 2017 avec un projet de réalisation d’une carte géologique. Ce premier défi a été une révélation : j’ai adoré ! Depuis, je n’ai jamais abandonné ce domaine</p>
+                <p class="servAreaparagraphe1aa">Poursuivant constamment ma quête d’amélioration et d’exploration des nouvelles technologies liées à cet univers fascinant. J’ai toujours ressenti une affinité particulière avec les cartes. Mon goût prononcé pour le visuel m’a naturellement conduit à embrasser le métier d’analyste SIG. Pour moi, une carte, c’est bien plus qu’un simple outil graphique : c’est une porte ouverte sur le voyage, une clé pour découvrir le monde et un moyen exceptionnel de rendre visibles des problématiques complexes.</p>
+                <p class="servAreaparagraphe1aa">Les cartes m’accompagnent partout : dans mes lectures de récits d’aventure, lors de mes randonnées ou encore dans des discussions passionnées sur les lieux qui nous entourent. Dès qu’une destination est mentionnée, je ressens l’irrésistible envie d’en connaître la localisation, d’examiner les contours dessinés par la géographie et d’admirer ces formes couchées sur le papier par d’autres cartographes.</p>
+                <p class="servAreaparagraphe1aa">C’est une activité passionnante, une véritable source d’émerveillement qui ne cesse de nourrir ma curiosité.</p>
+				</div>
+				</div>         
+                <p class="servAreaparagraphe1A1"><span style="font-weight: bold;">Peu importe où vous êtes dans le monde, nous pouvons collaborer sans aucune contraintes géographique.</span></p>
+                <p class="servAreaparagraphe2A1"><span style="font-weight: bold;">FLEXIBILITE ET DISPONIBILITE :</span></p>
+				<p class="servAreaparagraphe2A">Nous travaillons majoritairement à distance, ce qui nous permet de collaborer avec des clients de différentes régions et d’offrir une grande flexibilité.</p>
+                <p class="servAreaparagraphe3A1"><span style="font-weight: bold;">OUTILS ET TECHNOLOGIES :</span></p>
+				<p class="servAreaparagraphe3A">Nous utilisons des outils de communications pour faciliter les échanges, ainsi que des logiciels sophistiqués pour assurer une communication et une collaboration efficaces.</p>
+                <p class="servAreaparagraphe4A1"><span style="font-weight: bold;">AVANTAGES :</span></p>
+				<p class="servAreaparagraphe4A">Travailler avec nous à distance présente de nombreux avantages, notamment la flexibilité des horaires, la réduction des coûts de déplacement et l’efficacité des communications numériques.</p>
+<div id="comm">
+    <!-- Section Contact -->
+    <div id="contact">
+        <p id="contactme">Contactez-moi</p>
+        <div class="social-contact">
+            <a href="mailto:radoandriamily@gmail.com"><img src="images/ic1.png" alt="Email" class="icones"> Email</a>
+            <a href="https://wa.me/261345612397" target="_blank"><img src="images/ic5.png" alt="WhatsApp" class="icones"> WhatsApp</a>
+            <a href="https://www.linkedin.com/in/andriamily" target="_blank"><img src="images/ic4.png" alt="LinkedIn" class="icones"> LinkedIn</a>
+            <a href="https://www.facebook.com/andriamily" target="_blank"><img src="images/ic2.png" alt="Facebook" class="icones">Facebook</a>
+        </div>
+    </div>    
+    <!-- Section Partage -->
+    <div id="partage">
+        <p id="sharethispage">Partagez cette page</p>
+        <div class="social-share">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://andriamily.github.io/mily/#about" target="_blank"><img src="images/ic2.png" alt="Facebook" class="icones"> Facebook</a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://andriamily.github.io/mily/#about" target="_blank"><img src="images/ic4.png" alt="LinkedIn" class="icones"> LinkedIn</a>
+	            <a href="https://api.whatsapp.com/send?text=https://andriamily.github.io/mily/#about" target="_blank"><img src="images/ic5.png" alt="WhatsApp" class="icones"> WhatsApp</a>
+        </div>
+    </div>
+</div>
+</section>
+		<!-- servicespage -->
+        <section id="services" style="display: none;">
+        <div id="nom">
+            <div id="logo1"><img src="images/logo.png" alt="Logo" class="logo1"></div>
+            <div id="texte" class="texte-style">MILY"</div>
+        </div>
+			<div id="services0" class="services0">Une gamme complète de services spécialisés est proposée, alliant innovation et expertise, afin d'offrir des solutions de pointe dans les domaines suivants :</div>
+<div id="services1" class="services1">
+	<div class="resume2serv">
+		<div class="resume2a"><img src="images/p1.png"></div>
+			<div class="resume2b">
+				<p class="resume2b1">CARTOGRAPHIE STATIQUE : </p>
+				<p class="resumé">cartes de visionnage et d'orientation,</p>
+				<p class="resumé">cartes thématiques,</p>
+				<p class="resumé">cartes géologiques, hydrogéologiques, ...</p>
+			</div>
+		</div>	
+			<div id="services1a" class="services1a">
+                <p class="servAreaparagraphe1">Je propose la création de cartes statiques personnalisées adaptées à divers besoins. Ces cartes sont idéales pour des documents professionnels, académiques ou de présentation.</p>
+                <p class="servAreaparagraphe2"><span style="font-weight: bold;">CARTES DE LOCALISATION SIMPLES :</span> Ces cartes permettent de situer facilement un lieu ou une zone spécifique. Elles sont souvent utilisées pour des brochures, rapports, ou toute communication nécessitant une représentation claire et précise d’un endroit.</p>
+                <p class="servAreaparagraphe3"><span style="font-weight: bold;">CARTES THEMATIQUES :</span> Ces cartes sont conçues pour représenter des informations spécialisées selon un sujet précis. Parmi elles :<span style="font-weight: bold;">CARTES HYDROGEOLOGIQUES :</span> Ces cartes visualisent les caractéristiques des aquifères, les flux d’eau souterrains, les zones de recharge et les risques liés aux ressources en eau. Elles sont indispensables pour les études environnementales ou la gestion des ressources en eaux.</p>
+                <p class="servAreaparagraphe4"><span style="font-weight: bold;">CARTES GEOLOGIQUES :</span> Ces cartes détaillent la nature du sous-sol, les formations rocheuses et les structures géologiques. Elles sont utilisées pour des projets d’aménagement, d’extraction minière ou simplement pour comprendre le paysage géologique d’une région.</p>
+			</div>
+
+     </div>
+<div id="services2" class="services2">
+	                <div class="resume3serv">
+						<div class="resume3a"><img src="images/p2.png"></div>
+						<div class="resume3b">
+							<p class="resume3b1">CARTOGRAPHIE INTERACTIVE :</p>
+							<p class="resumé1">cartes interactive de navigation,</p>
+							<p class="resumé1">cartes personnalisables,</p>
+							<p class="resumé1">application cartographiques, webmapping ...</p>
+						</div>
+				</div>
+			<div id="services2a" class="services2a">
+                <p class="servAreaparagraphe1">Je conçois des solutions de cartographie interactive adaptées aux besoins spécifiques de chaque projet. Ces outils dynamiques permettent une exploration intuitive et personnalisée des données géographiques</p>
+                <p class="servAreaparagraphe2"><span style="font-weight: bold;">CARTOGRAPHIE INTERACTIVE PERSONNALISABLE :</span> Mes cartes interactives sont conçues pour offrir une expérience utilisateur sur mesure. Elles permettent de zoomer, filtrer les données, afficher des légendes dynamiques ou explorer des couches d’information spécifiques. Ces cartes peuvent être utilisées dans des applications variées, qu’il s’agisse de présentation de données ou de support à la prise de décision.</p>
+                <p class="servAreaparagraphe3"><span style="font-weight: bold;">APPLICATIONS CARTOGRAPHIQUES :</span> Je développe des applications géographiques intégrant des données interactives, idéales pour des entreprises, ONG ou institutions publiques. Ces outils permettent de visualiser des informations spatiales en temps réel, d’analyser des données géographiques et de générer des rapports personnalisés pour faciliter la gestion des projets ou des ressources</p>
+                <p class="servAreaparagraphe4"><span style="font-weight: bold;">WEBMAPPING :</span> Je propose des solutions de webmapping, qui permettent de visualiser et d’interagir avec des données géospatiales directement via un navigateur. Ces applications sont parfaites pour partager des cartes sur des sites web ou collaborer à distance. Elles intègrent des technologies modernes comme Leaflet, ou ArcGIS Online.</p>
+        </div>
+     </div>
+<div id="services3" class="services3">
+	                    <div class="resume4serv">
+						<div class="resume4a"><img src="images/p3.png"></div>
+						<div class="resume4b">
+							<p class="resume4b1">ENVIRONNEMENT ET HYGROGEOLOGIE APPLIQUEE AU SIG :</p>
+							<p class="resumé2">Calcule des indices environnementaux : ndvi, ndwi,</p>
+							<p class="resumé2">Analyses climatique</p>
+							<p class="resumé2">Analyses spatiale,</p>
+						</div>
+					</div>
+			<div id="services3a" class="services3a">
+                <p class="servAreaparagraphe1">Dans le domaine de l’environnement et de l’hydrogéologie, je mets à profit les technologies SIG pour fournir des solutions analytiques et visuelles adaptées aux besoins des projets. Mon expertise couvre les aspects suivants :</p>
+		        <p class="servAreaparagraphe2"><span style="font-weight: bold;">CALCULS D'INDICES ENVIRONNEMENTAUX (NDVI, NDWI, etc.):</span> Utilisation de la télédétection pour calculer et analyser des indices environnementaux comme le NDVI (Normalized Difference Vegetation Index) pour évaluer la santé de la végétation, ou le NDWI (Normalized Difference Water Index) pour détecter les zones humides ou les plans d’eau.</p>
+                <p class="servAreaparagraphe3"><span style="font-weight: bold;">ANALYSES CLIMATIQUES :</span> Étude des paramètres climatiques tels que la température, les précipitations, et les anomalies climatiques, afin de mieux comprendre leurs impacts sur l’environnement, les ressources naturelles et les zones à risque.</p>
+                <p class="servAreaparagraphe4"><span style="font-weight: bold;">ANALYSES SPATIALE :</span>Cartes de potentialités en eau souterraine : Création de cartes identifiant les zones favorables à l’exploitation des ressources en eau souterraine. Ces cartes intègrent des données géologiques, hydrologiques et environnementales pour aider à la gestion durable des aquifères.</p>
+        </div>
+     </div>
+<div id="services4" class="services4">
+            <div class="resume5serv">
+				<div class="resume5a"><img src="images/p4.png"></div>
+					<div class="resume5b">
+						<p class="resume5b1">INFOGRAPHIE :</p>
+						<p class="resumé3">digitalisation, </p>
+						<p class="resumé3">numérisation,</p>
+						<p class="resumé3">création de base de données, ... </p>
+					</div>
+					</div>
+			<div id="services4a" class="services4a">
+                <p class="servAreaparagraphe1">Dans le cadre de mes services, je propose des solutions en infographie et numérisation, qui combinent précision technique et rendu visuel professionnel pour répondre à vos besoins spécifiques.</p>
+                <p class="servAreaparagraphe2"><span style="font-weight: bold;">NUMERISATION DE DONNEES CARTOGRAPHIQUES :</span> Je transforme vos cartes papier ou anciens documents cartographiques en données numériques exploitables. Ces données numérisées peuvent ensuite être intégrées dans des systèmes SIG pour des analyses approfondies ou une meilleure gestion des projets.</p>
+                <p class="servAreaparagraphe3"><span style="font-weight: bold;">NUMERISATION DE DOCUMENTS ADMINISTRATIFS :</span> Simplifiez vos processus avec la conversion de vos documents administratifs en formats numériques. Cette solution est idéale pour l’archivage, la centralisation des informations et l’accès facile aux données.</p>
+                <p class="servAreaparagraphe4"><span style="font-weight: bold;">CARTES ET VISUELS POUR COMMUNICATION :</span> Je propose des services de création de cartes et visuels spécialement conçus pour la communication. Que ce soit pour des brochures, des affiches ou des publications professionnelles, chaque visuel est pensé pour captiver l’attention de votre audience et rendre les informations accessibles. Mes solutions allient clarté, esthétique et impact, afin de garantir une présentation optimale de vos données.</p>
+        </div>
+     </div>		
+<div id="comm">
+    <!-- Section Contact -->
+    <div id="contact">
+        <p id="contactme">Contactez-moi</p>
+        <div class="social-contact">
+            <a href="mailto:radoandriamily@gmail.com"><img src="images/ic1.png" alt="Email" class="icones"> Email</a>
+            <a href="https://wa.me/261345612397" target="_blank"><img src="images/ic5.png" alt="WhatsApp" class="icones"> WhatsApp</a>
+            <a href="https://www.linkedin.com/in/andriamily" target="_blank"><img src="images/ic4.png" alt="LinkedIn" class="icones"> LinkedIn</a>
+            <a href="https://www.facebook.com/andriamily" target="_blank"><img src="images/ic2.png" alt="Facebook" class="icones">Facebook</a>
+        </div>
+    </div> 
+    <!-- Section Partage -->
+    <div id="partage">
+        <p id="sharethispage">Partagez cette page</p>
+        <div class="social-share">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://andriamily.github.io/mily/#services" target="_blank"><img src="images/ic2.png" alt="Facebook" class="icones"> Facebook</a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://andriamily.github.io/mily/#services" target="_blank"><img src="images/ic4.png" alt="LinkedIn" class="icones"> LinkedIn</a>
+            <a href="https://api.whatsapp.com/send?text=https://andriamily.github.io/mily/#services" target="_blank"><img src="images/ic5.png" alt="WhatsApp" class="icones"> WhatsApp</a>
+        </div>
+    </div>
+</div>
+</section>
+		<!-- pageportfolio -->
+        <section id="portfolio" style="display: none;">
+            <div id="nom">
+                <div id="logo1"><img src="images/logo.png" alt="logo" class="logo1"></div>
+                <div id="texte" class="texte-style">MILY"</div>
+            </div>
+    <div id="portfolioinitial">QUELQUES EXEMPLES DE MES DERNIERES REALIATIONS...</div>
+<div id="servicesC" class="servicesC">
+    <div class="resume2servP">
+		<div class="resume2a"><img src="images/p5.png"></div>
+			<div class="resume2b">
+				<p class="resume2b1a"><img src="images/w1.png" alt="logo1bis" class="logo1bis">CLAUSE SUR L’AUTHENTICITÉ ET LA PROPRIÉTÉ</p>
+				<p class="resume2b2">Les réalisations présentées dans ce portfolio sont des créations originales, conçues à partir de méthodologies spécifiques et de données open source. Certaines peuvent également figurer dans des projets de grande envergure que j’ai réalisés ou apparaître dans d’autres contextes similaires, soit parce qu’elles ont été utilisées dans ces projets, soit par une simple coïncidence. Leur présence ici ne constitue en aucun cas une reproduction ou une affiliation directe avec des plateformes, institutions ou organisations tierces. Chaque carte reflète un travail rigoureux visant à fournir une représentation visuelle pertinente et adaptée aux besoins spécifiques d'un client, sans garantie quant à leur conformité avec des références officielles ou réglementaires.
+				(&copy;
+<a class="crd" href="https://www.esri.com/" target="_blank">Esri</a>,
+<a class="crd" href="https://www.arcgis.com/home/index.html" target="_blank">ArcGIS Online</a>,
+<a class="crd"href="https://pro.arcgis.com/" target="_blank">ArcGIS Pro</a>,
+<a class="crd"href="https://qgis.org/" target="_blank">QGIS</a>,
+<a class="crd"href="https://leafletjs.com/" target="_blank">Leaflet</a>,
+<a class="crd"href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>,
+<a class="crd"href="https://openlayers.org/" target="_blank">OpenLayers</a>.)
+</p>
+</div>
+</div>
+	<!-- Section 1 -->
+    <div id="prtfl3a" class="prtfl3a">
+        <div id="prtfl3imga" class="prtfl3imga">
+            <div id="prtfl3img1a" class="prtfl3img1a">
+                <a href="images/rea3.jpg" class="lightbox-link" data-description="Explorez l'information cartographique avec des interactions fluides et dynamiques.">
+                    <img src="images/rea3.jpg" alt="Image 1">
+                </a>
+            </div>
+            <div id="prtfl3img2a" class="prtfl3img2a">
+                <a href="images/rea4.jpg" class="lightbox-link" data-description="Visualisation cartographique optimisée pour le web, accessible et intuitive, généré à partir de l'outil webmapping présenté dans ce portfolio">
+                    <img src="images/rea4.jpg" alt="Image 2">
+                </a>
+            </div>
+        </div>
+        <div id="conteneur3a">
+            <div id="txtc3a" class="txtc3a">Cartographie interactive et webmapping : des outils dynamiques pour explorer, analyser et visualiser l'information géospatiale.</div>
+        </div>
+    </div>
+	    <div class="intermap" id="intermap">
+        <div id="mapportfolio"></div> <!-- Conteneur de la carte -->
+    </div>
+
+    <div class="intermap1" id="intermap1">
+        <div id="mapportfolio1"></div> <!-- Conteneur de la carte -->
+    </div>	
+    <!-- Section 2 -->
+    <div id="prtfl1a" class="prtfl1a">
+        <div id="prtfl1imga" class="prtfl1imga">
+            <div id="prtfl1img1a" class="prtfl1img1a">
+                <a href="images/rea1.jpg" class="lightbox-link" data-description="Informations spatiales optimisées pour une lecture rapide et efficace.">
+                    <img src="images/rea1.jpg" alt="Image 1">
+                </a>
+            </div>
+            <div id="prtfl1img2a" class="prtfl1img2a">
+                <a href="images/rea2.jpg" class="lightbox-link" data-description="Répartition géographique claire, facilitant l’analyse et la prise de décision.">
+                    <img src="images/rea2.jpg" alt="Image 2">
+                </a>
+            </div>
+        </div>
+        <div id="conteneur1a">
+            <div id="txtc1a" class="txtc1a">Deux cartes de localisation détaillées offrant une vue précise des territoires et points d’intérêt.</div>
+        </div>
+    </div>
+    <!-- Section 3 -->
+    <div id="prtfl2a" class="prtfl2a">
+        <div id="prtfl2imga" class="prtfl2imga">
+            <div id="prtfl2img1a" class="prtfl2img1a">
+                <a href="images/rea1bis.jpg" class="lightbox-link" data-description="Un aperçu de localisation et situation administrative généré à partir de l'outil webmapping présenté dans ce portfolio">
+                    <img src="images/rea1bis.jpg" alt="Image 1">
+                </a>
+            </div>
+            <div id="prtfl2img2a" class="prtfl2img2a">
+                <a href="images/rea2bis.jpg" class="lightbox-link" data-description="Visualisation précise des emplacements clés pour une meilleure orientation">
+                    <img src="images/rea2bis.jpg" alt="Image 2">
+                </a>
+            </div>
+        </div>
+        <div id="conteneur2a">
+            <div id="txtc2a" class="txtc2a">Cartographie efficace des espaces clés pour une meilleure compréhension géographique.</div>
+        </div>
+    </div>
+    <!-- Section 4 -->
+    <div id="prtfl5a" class="prtfl5a">
+        <div id="prtfl5imga" class="prtfl5imga">
+            <div id="prtfl5img1a" class="prtfl5img1a">
+                <a href="images/rea5.jpg" class="lightbox-link" data-description="Illustration précise du réseau hydrographique, révélant la dynamique des eaux dans un bassin versant.">
+                    <img src="images/rea5.jpg" alt="Image 1">
+                </a>
+            </div>
+            <div id="prtfl5img2a" class="prtfl5img2a">
+                <a href="images/rea6.jpg" class="lightbox-link" data-description="Présentation des structures géologiques et des fractures dans un bassin versant.">
+                    <img src="images/rea6.jpg" alt="Image 2">
+                </a>
+            </div>
+        </div>
+        <div id="conteneur5a">
+            <div id="txtc5a" class="txtc5a">Cartographie géologique complète du bassin versant : entre hydrologie et relief, une visualisation détaillée des éléments naturels et aménagés.</div>
+        </div>
+    </div>
+    <!-- Section 5 -->
+    <div id="prtfl6a" class="prtfl6a">
+        <div id="prtfl6imga" class="prtfl6imga">
+            <div id="prtfl6img1a" class="prtfl6img1a">
+                <a href="images/srv3.jpg" class="lightbox-link" data-description="Une représentation détaillée des formations géologiques sur support papier, offrant une vue exhaustive du territoire">
+                    <img src="images/srv3.jpg" alt="Image 1">
+                </a>
+            </div>
+            <div id="prtfl6img2a" class="prtfl6img2a">
+                <a href="images/rea6bis.jpg" class="lightbox-link" data-description="Extrait numérisé d'une carte géologique globale, optimisé pour une analyse plus précise à l’échelle communale.">
+                    <img src="images/rea6bis.jpg" alt="Image 2">
+                </a>
+            </div>
+        </div>
+        <div id="conteneur6a">
+            <div id="txtc6a" class="txtc6a">De la carte papier à sa version numérique : une transition entre la vision complète et l’analyse locale pour une meilleure interprétation géologique.</div>
+        </div>
+    </div>
+    <!-- Section 6 -->
+    <div id="prtfl7a" class="prtfl7a">
+        <div id="prtfl7imga" class="prtfl7imga">
+            <div id="prtfl7img1a" class="prtfl7img1a">
+                <a href="images/rea5bis2.jpg" class="lightbox-link" data-description="Présentation précise des formations géologiques, des localités et du réseau de drainage, offrant une lecture complète du terrain">
+                    <img src="images/rea5bis2.jpg" alt="Image 1">
+                </a>
+            </div>
+            <div id="prtfl7img2a" class="prtfl7img2a">
+                <a href="images/rea5bis1.jpg" class="lightbox-link" data-description="Visualisation des réseaux hydrographiques, des altitudes et des points cotés pour une analyse approfondie du relief et de l’eau.">
+                    <img src="images/rea5bis1.jpg" alt="Image 2">
+                </a>
+            </div>
+        </div>
+        <div id="conteneur7a">
+            <div id="txtc7a" class="txtc7a">Entre géologie et hydrologie, une cartographie détaillée révélant les altitudes, les structures du sol et la dynamique des eaux.</div>
+        </div>
+    </div>
+	<!-- Section 7 -->
+    <div id="prtfl4a" class="prtfl4a">
+        <div id="prtfl4imga" class="prtfl4imga">
+            <div id="prtfl4img1a" class="prtfl4img1a">
+                <a href="images/rea9.jpg" class="lightbox-link" data-description="Plan urbain détaillé sur support physique, illustrant les infrastructures et la répartition territoriale">
+                    <img src="images/rea9.jpg" alt="Image 1">
+                </a>
+            </div>
+            <div id="prtfl4img2a" class="prtfl4img2a">
+                <a href="images/rea10.jpg" class="lightbox-link" data-description="Optimisation graphique d’une carte urbaine, améliorée pour une meilleure lisibilité et précision des aménagements">
+                    <img src="images/rea10.jpg" alt="Image 2">
+                </a>
+            </div>
+        </div>
+        <div id="conteneur4a">
+            <div id="txtc4a" class="txtc4a">Du plan urbain traditionnel à sa version améliorée, une évolution pour une meilleure compréhension territoriale.</div>
+        </div>
+    </div>
+	<!-- Section 8 -->
+    <div id="prtfl4a" class="prtfl4a">
+        <div id="prtfl4imga" class="prtfl4imga">
+            <div id="prtfl4img1a" class="prtfl4img1a">
+                <a href="images/rea11.jpg" class="lightbox-link" data-description="Une refonte digitale avec intégration de données dynamiques pour une gestion urbaine avancée.">
+                    <img src="images/rea11.jpg" alt="Image 1">
+                </a>
+            </div>
+            <div id="prtfl4img2a" class="prtfl4img2a">
+                <a href="images/rea12.jpg" class="lightbox-link" data-description="Version numérique de la carte papier, offrant une visualisation claire et accessible des espaces urbains.">
+                    <img src="images/rea12.jpg" alt="Image 2">
+                </a>
+            </div>
+        </div>
+        <div id="conteneur4a">
+            <div id="txtc4a" class="txtc4a">Une transition vers le numérique, offrant une visualisation affinée des espaces urbains et leurs dynamiques.</div>
+        </div>
+    </div>
+	<!-- Section 9 -->
+    <div id="prtfl4a" class="prtfl4a">
+        <div id="prtfl4imga" class="prtfl4imga">
+            <div id="prtfl4img1a" class="prtfl4img1a">
+                <a href="images/rea17.jpg" class="lightbox-link" data-description="Un outil d’urbanisme numérique intégrant des couches d’informations stratégiques pour une meilleure planification.">
+                    <img src="images/rea17.jpg" alt="Image 1">
+                </a>
+            </div>
+            <div id="prtfl4img2a" class="prtfl4img2a">
+                <a href="images/rea18.jpg" class="lightbox-link" data-description="Cartographie d'urbanisme permettant une exploration fluide des zones urbaines et de leurs caractéristiques.">
+                    <img src="images/rea18.jpg" alt="Image 2">
+                </a>
+            </div>
+        </div>
+        <div id="conteneur4a">
+            <div id="txtc4a" class="txtc4a">Numérisatin de carte d'urbanisme pour explorer, comprendre et optimiser l’aménagement urbain.</div>
+        </div>
+    </div>
+	<!-- Section 10 -->
+    <div id="prtfl4a" class="prtfl4a">
+        <div id="prtfl4imga" class="prtfl4imga">
+            <div id="prtfl4img1a" class="prtfl4img1a">
+                <a href="images/rea13.jpg" class="lightbox-link" data-description="Identification et localisation des limites administratives, des routes et des lacs dans la zone de reboisement.">
+                    <img src="images/rea13.jpg" alt="Image 1">
+                </a>
+            </div>
+            <div id="prtfl4img2a" class="prtfl4img2a">
+                <a href="images/rea14.jpg" class="lightbox-link" data-description="Vue d’ensemble des espaces dédiés à la reforestation, mettant en avant leur répartition sur le territoire.">
+                    <img src="images/rea14.jpg" alt="Image 2">
+                </a>
+            </div>
+        </div>
+        <div id="conteneur4a">
+            <div id="txtc4a" class="txtc4a">Une vision complète du territoire de reboisement, entre cadre administratif et répartition des parcelles.</div>
+        </div>
+    </div>	
+	<!-- Section 11 -->
+    <div id="prtfl4a" class="prtfl4a">
+        <div id="prtfl4imga" class="prtfl4imga">
+            <div id="prtfl4img1a" class="prtfl4img1a">
+                <a href="images/rea15.jpg" class="lightbox-link" data-description="Détail précis de parcelle reboisée, révélant sa localisation et son environnement immédiat.">
+                    <img src="images/rea15.jpg" alt="Image 1">
+                </a>
+            </div>
+            <div id="prtfl4img2a" class="prtfl4img2a">
+                <a href="images/rea16.jpg" class="lightbox-link" data-description="Zoom sur une zone spécifique du reboisement, offrant une lecture approfondie des surfaces restaurées.">
+                    <img src="images/rea16.jpg" alt="Image 2">
+                </a>
+            </div>
+        </div>
+        <div id="conteneur4a">
+            <div id="txtc4a" class="txtc4a">Des cartes détaillées pour mieux comprendre la structure et l’implantation des zones reboisées.</div>
+        </div>
+    </div>
+	<!-- Section 12 -->
+    <div id="prtfl4a" class="prtfl4a">
+        <div id="prtfl4imga" class="prtfl4imga">
+            <div id="prtfl4img1a" class="prtfl4img1a">
+                <a href="images/rea19.jpg" class="lightbox-link" data-description="Traitement d’image satellitaire pour une analyse détaillée du relief et la délimitation précise du bassin versant.">
+                    <img src="images/rea19.jpg" alt="Image 1">
+                </a>
+            </div>
+            <div id="prtfl4img2a" class="prtfl4img2a">
+                <a href="images/rea20.jpg" class="lightbox-link" data-description="Visualisation satellitaire optimisée pour l’étude des paramètres climatiques et leur impact sur le territoire.">
+                    <img src="images/rea20.jpg" alt="Image 2">
+                </a>
+            </div>
+        </div>
+        <div id="conteneur4a">
+            <div id="txtc6a" class="txtc6a">L’imagerie satellite au service de l’analyse géographique : entre topographie et climatologie, une cartographie précise pour une meilleure compréhension du territoire.</div>
+        </div>
+    </div>
+	<!-- Section 13 -->
+    <div id="prtfl4a" class="prtfl4a">
+        <div id="prtfl4imga" class="prtfl4imga">
+            <div id="prtfl4img1a" class="prtfl4img1a">
+                <a href="images/rea21.jpg" class="lightbox-link" data-description="Numérisation de document administratif et transformation en bases de données exploitables pour une gestion plus fluide et sécurisée.">
+                    <img src="images/rea21.jpg" alt="Image 1">
+                </a>
+            </div>
+            <div id="prtfl4img2a" class="prtfl4img2a">
+                <a href="images/rea22.jpg" class="lightbox-link" data-description="Conversion de documents papier en format numérique structuré, facilitant l’archivage et l’accès aux informations essentielles.">
+                    <img src="images/rea22.jpg" alt="Image 2">
+                </a>
+            </div>
+        </div>
+        <div id="conteneur4a">
+            <div id="txtc6a" class="txtc6a">Numérisation de documents administratifs pour les convertir en base de données numérique, optimisant l’archivage, la gestion et l’accès aux informations.</div>
+        </div>
+    </div>
+</div>
+
+<div class="portfolioinitialz" id="portfolioinitialz"><span style="font-weight: bold;">EXPERTISE ET CONFIDENTIALITE</span>
+Notre portfolio est une vitrine de notre savoir-faire en cartographie, transformation digitale et en analyse géospatiale. Les réalisations présentées ici ont été conçues à des fins démonstratives, illustrant nos compétences techniques sans contenir de données sensibles ou personnelles. Par souci de confidentialité, nous ne publions pas d’informations restreintes, garantissant ainsi la protection des projets et des informations de nos clients.
+Mais notre expertise ne s’arrête pas là. Grâce à une maîtrise approfondie des outils géospatiaux et des méthodologies avancées, nous sommes en mesure de concevoir des solutions sur mesure, adaptées aux besoins spécifiques de chaque projet. De l’aménagement urbain à l’analyse environnementale, nous pouvons aller encore plus loin, en proposant des cartographies interactives, des études géologiques précises et des représentations visuelles innovantes.
+Avec nous, vos projets bénéficient d’une approche fiable, professionnelle et tournée vers l’innovation. Si vous souhaitez explorer de nouvelles possibilités ou avez un besoin spécifique, nous serons ravis de vous accompagner pour donner vie à vos idées cartographiques.
+N’hésitez pas à nous contacter pour discuter de vos besoins et voir comment nous pouvons vous accompagner efficacement !
+</div>
+
+<div id="comm">
+    <!-- Section Contact -->
+    <div id="contact">
+        <p id="contactme">Contactez-moi</p>
+        <div class="social-contact">
+            <a href="mailto:radoandriamily@gmail.com"><img src="images/ic1.png" alt="Email" class="icones"> Email</a>
+            <a href="https://wa.me/261345612397" target="_blank"><img src="images/ic5.png" alt="WhatsApp" class="icones"> WhatsApp</a>
+            <a href="https://www.linkedin.com/in/andriamily" target="_blank"><img src="images/ic4.png" alt="LinkedIn" class="icones"> LinkedIn</a>
+            <a href="https://www.facebook.com/andriamily" target="_blank"><img src="images/ic2.png" alt="Facebook" class="icones">Facebook</a>
+        </div>
+    </div>    
+    <!-- Section Partage -->
+    <div id="partage">
+        <p id="sharethispage">Partagez cette page</p>
+        <div class="social-share">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://andriamily.github.io/mily/#portfolio" target="_blank"><img src="images/ic2.png" alt="Facebook" class="icones"> Facebook</a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://andriamily.github.io/mily/#portfolio" target="_blank"><img src="images/ic4.png" alt="LinkedIn" class="icones"> LinkedIn</a>
+            <a href="https://api.whatsapp.com/send?text=https://andriamily.github.io/mily/#portfolio" target="_blank"><img src="images/ic5.png" alt="WhatsApp" class="icones"> WhatsApp</a>
+        </div>
+    </div>
+    </div>
+</section>
+	<!-- pagecontacts -->
+    <section id="contacts" style="display: none;">
+        <div id="nom">
+            <div id="logo1"><img src="images/logo.png" alt="logo" class="logo1"></div>
+            <div id="texte" class="texte-style">MILY"</div>
+        </div>
+<div class="contact-container">
+    <h2>Contactez-moi</h2>
+    <form id="contact-form" action="https://formspree.io/f/xdkzopbp" method="POST">
+        <div class="input-container">
+            <input type="text" id="name" name="name" placeholder="Nom complet" required>
+            <label for="name">Nom complet</label>
+        </div>
+
+        <div class="input-container">
+            <input type="email" id="email" name="email" placeholder="Votre Email" required>
+            <label for="email">Votre Email</label>
+        </div>
+
+        <div class="input-container">
+            <textarea id="message" name="message" rows="4" placeholder=" " required></textarea>
+            <label for="message">Message</label>
+        </div>
+
+        <button class="send" type="submit">Envoyer</button>
+    </form>
+
+    <p class="or">------ ou sur ------</p>
+    <div class="social-links">
+        <a href="https://wa.me/261345612397" target="_blank">
+            <img src="images/ic5.png" alt="WhatsApp" class="icones"> WhatsApp
+        </a>
+        <a href="https://www.facebook.com/andriamily" target="_blank">
+            <img src="images/ic2.png" alt="Facebook" class="icones"> Facebook
+        </a>
+        <a href="https://www.linkedin.com/in/andriamily" target="_blank">
+            <img src="images/ic4.png" alt="LinkedIn" class="icones"> LinkedIn
+        </a>
+    </div>
+</div>
+</section>
+<button id="back-to-top">^</button>
+<button id="back-to-top1">^</button>
+<button id="back-to-top2">^</button>
+<button id="back-to-top3">^</button>
+<button id="back-to-top4">^</button>
+<button id="back-to-top5">^</button>
+<button id="back-to-top6">^</button>
+<button id="back-to-top7">^</button>
+<button id="back-to-top8">^</button>
+</div>
+<footer>
+    <p>&copy; 2025 MILY". Tous droits réservés.</p>
+    <p><a class="crd1" href="mailto:radoandriamily@gmail.com">radoandriamily@gmail.com</a></p>
+</footer>
+</body>
+</html>
